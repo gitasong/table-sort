@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Filter from './Filter';
+import Search from './Search';
 
 class App extends Component {
   constructor(props) {
@@ -61,8 +61,8 @@ class App extends Component {
     return (
       <div className="App">
         <header as="h1">Title Sort</header>
-        {/* filter/input component - fetch and filter data based on input string */}
-        <Filter
+        {/* search/input component - fetch and filter data based on input string */}
+        <Search
           updateSearchTerm={this.updateSearchTerm}
           processSearchTerm={this.processSearchTerm}
           searchTerm={this.searchTerm}

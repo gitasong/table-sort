@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form } from 'semantic-ui-react';
 
-class Filter extends Component {
+class Search extends Component {
   render() {
     return(
       <Form onSubmit={this.props.processSearchTerm}>
@@ -19,4 +19,4 @@ class Filter extends Component {
   }
 }
 
-export default Filter;
+export default Search;
