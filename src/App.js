@@ -14,6 +14,11 @@ class App extends Component {
     this.submitSearchTerm = this.submitSearchTerm.bind(this);
   }
 
+  updateSearchTerm = (event, {value}) => {
+    this.setState({searchTerm: {value}});
+    console.log(`updated searchTerm: ${value}`);
+  }
+
   render() {
     return (
       <div className="App">
