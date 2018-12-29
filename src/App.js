@@ -19,6 +19,9 @@ class App extends Component {
     console.log(`updated searchTerm: ${value}`);
   }
 
+  submitSearchTerm = (event) => {
+    // starting with seed data from JSON file
+    // TODO: fetch data from JSON file
     const data = [
       {
         "userId": 1,
@@ -45,6 +48,9 @@ class App extends Component {
         "completed": true
       }
     ];
+
+    // filter for searchTerm
+  }
 
   render() {
     return (
