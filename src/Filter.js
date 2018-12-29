@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Input } from 'semantic-ui-react';
+import { Form } from 'semantic-ui-react';
 
 class Filter extends Component {
   render() {
