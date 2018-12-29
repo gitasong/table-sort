@@ -7,7 +7,32 @@ class App extends Component {
     super(props);
     this.state = {
       searchTerm: '',
-      // data: []
+      data: [
+        {
+          "userId": 1,
+          "id": 1,
+          "title": "delectus aut autem",
+          "completed": false
+        },
+        {
+          "userId": 1,
+          "id": 2,
+          "title": "quis ut nam facilis et officia qui",
+          "completed": false
+        },
+        {
+          "userId": 1,
+          "id": 3,
+          "title": "fugiat veniam minus",
+          "completed": false
+        },
+        {
+          "userId": 1,
+          "id": 4,
+          "title": "et porro tempora",
+          "completed": true
+        }
+      ]
     }
 
     this.updateSearchTerm = this.updateSearchTerm.bind(this);
@@ -21,34 +46,6 @@ class App extends Component {
 
   processSearchTerm = (event) => {
     // starting with seed data from JSON file
-    // TODO: fetch data from JSON file
-    const data = [
-      {
-        "userId": 1,
-        "id": 1,
-        "title": "delectus aut autem",
-        "completed": false
-      },
-      {
-        "userId": 1,
-        "id": 2,
-        "title": "quis ut nam facilis et officia qui",
-        "completed": false
-      },
-      {
-        "userId": 1,
-        "id": 3,
-        "title": "fugiat veniam minus",
-        "completed": false
-      },
-      {
-        "userId": 1,
-        "id": 4,
-        "title": "et porro tempora",
-        "completed": true
-      }
-    ];
-
     // filter for searchTerm
     const { searchTerm } = this.state;
 
