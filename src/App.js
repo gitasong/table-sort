@@ -47,7 +47,7 @@ class App extends Component {
   processSearchTerm = (event) => {
     // starting with seed data from JSON file
     // filter for searchTerm
-    const { searchTerm } = this.state;
+    const { searchTerm, data } = this.state;
 
     event.preventDefault();
     const filteredData = data.filter((item) => item.title === searchTerm.value);
