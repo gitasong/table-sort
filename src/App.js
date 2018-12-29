@@ -9,6 +9,11 @@ class App extends Component {
       searchTerm: '',
       // data: []
     }
+
+    this.updateSearchTerm = this.updateSearchTerm.bind(this);
+    this.submitSearchTerm = this.submitSearchTerm.bind(this);
+  }
+
   render() {
     return (
       <div className="App">
