@@ -11,10 +11,10 @@ class TitleTable extends Component {
     const titleList = data.map((item) =>
       // <TitleRow item={item} key={item.id} />
       <Table.Row key={item.id}>
-        <Table.Cell>{item.userId}</Table.Cell>
-        <Table.Cell>{item.id}</Table.Cell>
-        <Table.Cell>{item.title}</Table.Cell>
-        <Table.Cell>{item.completed}</Table.Cell>
+        <Table.Cell><p>{item.userId}</p></Table.Cell>
+        <Table.Cell><p>{item.id}</p></Table.Cell>
+        <Table.Cell><p>{item.title}</p></Table.Cell>
+        <Table.Cell><p>{item.completed}</p></Table.Cell>
       </Table.Row>
     );
     // console.log(`titleList: ${titleList}`);
