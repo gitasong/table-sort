@@ -33,7 +33,8 @@ class App extends Component {
           "title": "et porro tempora",
           "completed": true
         }
-      ]
+      ],
+      filteredData: []
     }
 
     this.updateSearchTerm = this.updateSearchTerm.bind(this);
