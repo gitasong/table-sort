@@ -51,6 +51,7 @@ class App extends Component {
     // TODO: fetch data from JSON file (in componentDidMount?)
     // filter for searchTerm
     const { searchTerm, data } = this.state;
+    console.log(`searchTerm: ${searchTerm.value}`);
 
     event.preventDefault();
     const filteredData = data.filter((item) => item.title === searchTerm.value);
@@ -60,6 +61,9 @@ class App extends Component {
 
   render() {
     const filteredTitles = this.state.filteredData;
+    console.log(`filteredTitles instanceof Array? ${filteredTitles instanceof Array}`);
+    console.log(`filteredTitles.length = ${filteredTitles.length}`);
+
     return (
       <div className="App">
         <header as="h1">Title Sort</header>
