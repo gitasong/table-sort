@@ -76,7 +76,7 @@ class App extends Component {
         />
         {/* table component - conditionally render based on results of input filtering */}
           {/* table row component - render for each returned data object */}
-        {filteredTitles.length > 0 ? <TitleTable data={filteredTitles} /> : <p>No titles to display</p>}
+        <TitleTable data={displayData} />
       </div>
     );
   }
