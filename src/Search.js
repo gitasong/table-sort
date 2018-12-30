@@ -11,9 +11,6 @@ class Search extends Component {
           placeholder="Enter title"
           onChange={this.props.updateSearchTerm}
         />
-        <Form.Button>
-          Submit
-        </Form.Button>
       </Form>
     )
   }
