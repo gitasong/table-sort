@@ -32,8 +32,11 @@ class TitleTable extends Component {
           </Table.Row>
         </Table.Header>
 
+        <Table.Body>
+          {/* {this.titleList.length > 0 ? {titleList} : null} */}
+          {titleList}
+        </Table.Body>
 
-        {this.titleList.length > 0 ? <Table.Body>{titleList}</Table.Body> : null}
       </Table>
     );
   }
