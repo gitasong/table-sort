@@ -59,6 +59,8 @@ class App extends Component {
     this.setState({filteredData: filteredData});
   }
 
+  // TODO: reset search field after submit (reset button?)
+
   render() {
     const { searchTerm, data } = this.state;
     const displayData = searchTerm ? this.state.filteredData : data;  // TODO: Need to handle case where the filter returns no data, and display a message instead of the entire dataset
