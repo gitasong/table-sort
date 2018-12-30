@@ -17,7 +17,7 @@ class TitleTable extends Component {
         <Table.Cell><p>{item.completed}</p></Table.Cell>
       </Table.Row>
     );
-    // console.log(`titleList: ${titleList}`);
+    console.log(`titleList: ${titleList}`);
     console.log(`titleList instanceof Array? ${titleList instanceof Array}`);
     console.log(`titleList.length = ${titleList.length}`);
 
