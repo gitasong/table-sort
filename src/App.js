@@ -59,6 +59,7 @@ class App extends Component {
   }
 
   render() {
+    const filteredTitles = this.state.filteredData;
     return (
       <div className="App">
         <header as="h1">Title Sort</header>
@@ -70,6 +71,7 @@ class App extends Component {
         />
         {/* table component - conditionally render based on results of input filtering */}
           {/* table row component - render for each returned data object */}
+        {filteredTitles.length > 0 ? (<TitleTable data={filteredTitles} />) : (<p>No titles to display</p>)}
       </div>
     );
   }
