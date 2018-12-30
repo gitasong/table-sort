@@ -23,14 +23,15 @@ class TitleTable extends Component {
 
     return(
       <Table celled collapsing>
-        {/* <Table.Header>
+        <Table.Header>
           <Table.Row>
             <Table.HeaderCell>User ID</Table.HeaderCell>
             <Table.HeaderCell>ID</Table.HeaderCell>
             <Table.HeaderCell>Title</Table.HeaderCell>
             <Table.HeaderCell>Completed</Table.HeaderCell>
           </Table.Row>
-        </Table.Header> */}
+        </Table.Header>
+
 
         {this.titleList.length > 0 ? <Table.Body>{titleList}</Table.Body> : null}
       </Table>
