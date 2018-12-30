@@ -60,9 +60,10 @@ class App extends Component {
   }
 
   render() {
-    const filteredTitles = this.state.filteredData;
-    console.log(`filteredTitles instanceof Array? ${filteredTitles instanceof Array}`);
-    console.log(`filteredTitles.length = ${filteredTitles.length}`);
+    const { searchTerm, data } = this.state;
+    const displayData = searchTerm ? this.state.filteredData : data;  // TODO: Need to handle case where the filter returns no data, and display a message instead of the entire dataset
+    console.log(`displayData instanceof Array? ${displayData instanceof Array}`);
+    console.log(`displayData.length = ${displayData.length}`);
 
     return (
       <div className="App">
