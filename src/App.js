@@ -38,7 +38,7 @@ class App extends Component {
     }
 
     this.updateSearchTerm = this.updateSearchTerm.bind(this);
-    this.processSearchTerm = this.processSearchTerm.bind(this);
+    this.filterSearchTerm = this.filterSearchTerm.bind(this);
   }
 
   updateSearchTerm = (event, {value}) => {
@@ -46,7 +46,7 @@ class App extends Component {
     console.log(`updated searchTerm: ${value}`);
   }
 
-  processSearchTerm = (event) => {
+  filterSearchTerm = (event) => {
     // starting with seed data from JSON file
     // TODO: fetch data from JSON file (in componentDidMount?)
     // filter for searchTerm
@@ -71,7 +71,7 @@ class App extends Component {
         {/* search/input component - fetch and filter data based on input string */}
         <Search
           updateSearchTerm={this.updateSearchTerm}
-          processSearchTerm={this.processSearchTerm}
+          filterSearchTerm={this.filterSearchTerm}
           searchTerm={this.searchTerm}
         />
         {/* table component - conditionally render based on results of input filtering */}

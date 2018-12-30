@@ -4,7 +4,7 @@ import { Form } from 'semantic-ui-react';
 class Search extends Component {
   render() {
     return(
-      <Form onSubmit={this.props.processSearchTerm}>
+      <Form onSubmit={this.props.filterSearchTerm}>
         <Form.Input
           fluid
           label="Search for a Title"
