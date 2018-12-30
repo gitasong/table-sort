@@ -55,6 +55,7 @@ class App extends Component {
     event.preventDefault();
     const filteredData = data.filter((item) => item.title === searchTerm.value);
     filteredData.forEach(item => console.log(`filteredData item ID ${item.id}: ${item.title}`));
+    this.setState({filteredData: filteredData});
   }
 
   render() {
