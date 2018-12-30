@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Search from './Search';
+import TitleTable from './TitleTable';
 
 class App extends Component {
   constructor(props) {
