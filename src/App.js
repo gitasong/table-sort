@@ -13,8 +13,7 @@ class App extends Component {
       filteredData: []
     }
 
-    this.updateSearchTerm = this.updateSearchTerm.bind(this);
-    this.filterSearchTerm = this.filterSearchTerm.bind(this);
+    this.filterSearch = this.filterSearch.bind(this);
   }
 
   componentDidMount = () => {
@@ -28,20 +27,18 @@ class App extends Component {
     .catch(error => console.error);
   }
 
-  updateSearchTerm = (event, {value}) => {
-    this.setState({searchTerm: {value}});
+  filterSearch = async (event, {value}) => {
+    // update search term
+    await this.setState({searchTerm: {value}});
     console.log(`updated searchTerm: ${value}`);
-  }
 
-  filterSearchTerm = (event) => {
     // filter for searchTerm
     const { searchTerm, data } = this.state;
     // console.log(`searchTerm: ${searchTerm.value}`);
 
-    event.preventDefault();
     const filteredData = data.filter((item) => item.title.includes(searchTerm.value));
     filteredData.forEach(item => console.log(`filteredData item ID ${item.id}: ${item.title}`));
-    this.setState({filteredData: filteredData});
+    await this.setState({filteredData: filteredData});
   }
 
   // TODO: reset search field after submit (reset button?)
@@ -57,8 +54,7 @@ class App extends Component {
         <Header as="h1">Title Sort</Header>
         {/* search/input component - fetch and filter data based on input string */}
         <Search
-          updateSearchTerm={this.updateSearchTerm}
-          filterSearchTerm={this.filterSearchTerm}
+          filterSearch={this.filterSearch}
           searchTerm={this.searchTerm}
         />
         {/* table component - conditionally render based on results of input filtering */}
