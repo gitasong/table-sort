@@ -8,7 +8,7 @@ class Search extends Component {
         <Form.Input
           fluid
           label="Search for a Title"
-          placeholder="Enter title"
+          placeholder="Enter search text (Press Return to search)"
           onChange={this.props.updateSearchTerm}
         />
       </Form>
