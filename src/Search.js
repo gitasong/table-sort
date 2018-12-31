@@ -10,7 +10,7 @@ class Search extends Component {
           size="large"
           icon="search"
           label="Search for a Title"
-          placeholder="Enter search text (Press Return to search)"
+          placeholder="Enter search text"
           onChange={this.props.filterSearch}
         />
       </Form>
