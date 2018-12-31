@@ -41,10 +41,9 @@ class App extends Component {
     await this.setState({filteredData: filteredData});
   }
 
-  // TODO: reset search field after submit (reset button?)
-
   render() {
     const { searchTerm, data } = this.state;
+    // conditionally render data based on results of input filtering
     const displayData = searchTerm ? this.state.filteredData : data;  // TODO: Need to handle case where the filter returns no data, and display a message instead of the entire dataset
     // console.log(`displayData instanceof Array? ${displayData instanceof Array}`);
     // console.log(`displayData.length = ${displayData.length}`);
