@@ -1,0 +1,22 @@
+.App {
+  width: 85%;
+}
+
+.ui.form .field > label {
+  font-size: 1.15em;
+}
+
+.ui.form .field .ui.input {
+  width: 65%;
+  min-width: 65%;
+  max-width: 65%;
+}
+
+.ui.form .field .ui.input input, .ui.form input[type=text] {
+  min-width: 100%;
+}
+
+.ui.collapsing.table {
+  width: auto;
+  max-width: 85%;
+}
