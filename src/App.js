@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import  { Header } from 'semantic-ui-react';
 import Search from './Search';
 import TitleTable from './TitleTable';
 
@@ -52,8 +53,8 @@ class App extends Component {
     // console.log(`displayData.length = ${displayData.length}`);
 
     return (
-        <header as="h1">Title Sort</header>
       <container fluid text className="App">
+        <Header as="h1">Title Sort</Header>
         {/* search/input component - fetch and filter data based on input string */}
         <Search
           updateSearchTerm={this.updateSearchTerm}
