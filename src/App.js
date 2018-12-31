@@ -52,8 +52,8 @@ class App extends Component {
     // console.log(`displayData.length = ${displayData.length}`);
 
     return (
-      <div className="App">
         <header as="h1">Title Sort</header>
+      <container fluid text className="App">
         {/* search/input component - fetch and filter data based on input string */}
         <Search
           updateSearchTerm={this.updateSearchTerm}
@@ -62,7 +62,7 @@ class App extends Component {
         />
         {/* table component - conditionally render based on results of input filtering */}
         <TitleTable data={displayData} />
-      </div>
+      </container>
     );
   }
 }
