@@ -20,7 +20,7 @@ class App extends Component {
     fetch('https://jsonplaceholder.typicode.com/todos')
     .then(response => response.json())
     .then(responseJSON => {
-      responseJSON.map(item => console.log(item));
+      // responseJSON.map(item => console.log(item));
       this.setState({data: responseJSON});
       // console.log(`new data: ${this.state.data}`);
     })
