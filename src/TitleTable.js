@@ -5,9 +5,10 @@ import { Table } from 'semantic-ui-react';
 class TitleTable extends Component {
   render() {
     const data = this.props.data;
-    console.log(`data in TitleTable: ${data}`);
-    console.log(`data in TitleTable instanceof Array? ${data instanceof Array}`);
-    console.log(`data.length = ${this.props.data.length}`);
+    // console.log(`data in TitleTable: ${data}`);
+    // console.log(`data in TitleTable instanceof Array? ${data instanceof Array}`);
+    // console.log(`data.length = ${this.props.data.length}`);
+
     const titleList = data.map((item) =>
       // <TitleRow item={item} key={item.id} />
       <Table.Row key={item.id}>
@@ -17,9 +18,9 @@ class TitleTable extends Component {
       <Table.Cell><p>{`${item.completed}`}</p></Table.Cell>
       </Table.Row>
     );
-    console.log(`titleList: ${titleList}`);
-    console.log(`titleList instanceof Array? ${titleList instanceof Array}`);
-    console.log(`titleList.length = ${titleList.length}`);
+    // console.log(`titleList: ${titleList}`);
+    // console.log(`titleList instanceof Array? ${titleList instanceof Array}`);
+    // console.log(`titleList.length = ${titleList.length}`);
 
     return(
       <Table celled collapsing>

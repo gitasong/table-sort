@@ -22,7 +22,7 @@ class App extends Component {
     .then(responseJSON => {
       responseJSON.map(item => console.log(item));
       this.setState({data: responseJSON});
-      console.log(`new data: ${this.state.data}`);
+      // console.log(`new data: ${this.state.data}`);
     })
     .catch(error => console.error);
   }
@@ -35,7 +35,7 @@ class App extends Component {
   filterSearchTerm = (event) => {
     // filter for searchTerm
     const { searchTerm, data } = this.state;
-    console.log(`searchTerm: ${searchTerm.value}`);
+    // console.log(`searchTerm: ${searchTerm.value}`);
 
     event.preventDefault();
     const filteredData = data.filter((item) => item.title.includes(searchTerm.value));
@@ -48,8 +48,8 @@ class App extends Component {
   render() {
     const { searchTerm, data } = this.state;
     const displayData = searchTerm ? this.state.filteredData : data;  // TODO: Need to handle case where the filter returns no data, and display a message instead of the entire dataset
-    console.log(`displayData instanceof Array? ${displayData instanceof Array}`);
-    console.log(`displayData.length = ${displayData.length}`);
+    // console.log(`displayData instanceof Array? ${displayData instanceof Array}`);
+    // console.log(`displayData.length = ${displayData.length}`);
 
     return (
       <div className="App">
@@ -61,7 +61,6 @@ class App extends Component {
           searchTerm={this.searchTerm}
         />
         {/* table component - conditionally render based on results of input filtering */}
-          {/* table row component - render for each returned data object */}
         <TitleTable data={displayData} />
       </div>
     );
