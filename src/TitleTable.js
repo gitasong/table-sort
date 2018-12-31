@@ -14,7 +14,7 @@ class TitleTable extends Component {
         <Table.Cell><p>{item.userId}</p></Table.Cell>
         <Table.Cell><p>{item.id}</p></Table.Cell>
         <Table.Cell><p>{item.title}</p></Table.Cell>
-        <Table.Cell><p>{item.completed}</p></Table.Cell>
+      <Table.Cell><p>{`${item.completed}`}</p></Table.Cell>
       </Table.Row>
     );
     console.log(`titleList: ${titleList}`);
