@@ -33,8 +33,6 @@ class App extends Component {
   }
 
   filterSearchTerm = (event) => {
-    // starting with seed data from JSON file
-    // TODO: fetch data from JSON file (in componentDidMount?)
     // filter for searchTerm
     const { searchTerm, data } = this.state;
     console.log(`searchTerm: ${searchTerm.value}`);
