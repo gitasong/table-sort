@@ -16,6 +16,17 @@ class App extends Component {
     this.filterSearchTerm = this.filterSearchTerm.bind(this);
   }
 
+  componentDidMount = () => {
+    fetch('https://jsonplaceholder.typicode.com/todos')
+    .then(response => response.json())
+    .then(responseJSON => {
+      responseJSON.map(item => console.log(item));
+      this.setState({data: responseJSON});
+      console.log(`new data: ${this.state.data}`);
+    })
+    .catch(error => console.error);
+  }
+
   updateSearchTerm = (event, {value}) => {
     this.setState({searchTerm: {value}});
     console.log(`updated searchTerm: ${value}`);
